@@ -1,0 +1,72 @@
+===========================
+How to use 3-say_my_name.py
+===========================
+
+``say_my_name(...)`` is a function that prints My name is <first_name> <last_name>. The function only works with strings.
+
+::
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name = ("Hilda", "Jerono")
+My name is Hilda Jerono
+
+::
+
+>>> say_my_name("Hilda")
+My name is Hilda
+
+Non-strings
+===========
+If a non-string is passed through ``say_my_name(...)`` a TypeError is raised.
+
+::
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name("Hilda", 12)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+
+::
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name(12, "Jerono")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+Argument error
+==============
+If more arguments are given to ``say_my_name`` a ValueError is raised. The function accepts only two arguments.
+
+::
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name("He", "She", "It")
+Traceback (most recent call last):
+...
+ValueError: Too many arguments given
+
+No arguments
+============
+If None is provided as an argument to ``say_my_name`` raise a TypeError.
+
+::
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name(None)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+::
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name(None, "Jerono")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+::
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name("Hilda", None)
+Traceback (most recent call last):
+TypeError: last_name must be a string 

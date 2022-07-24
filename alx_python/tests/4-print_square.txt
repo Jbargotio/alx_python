@@ -1,0 +1,93 @@
+============================
+How to use 4-print_square.py
+============================
+
+This file contains usage of ``print_square(size)`` which prints a square using the character #.
+Size must only be an integer.
+
+Integers
+=========
+
+::
+
+>>> print_square = __import__('4-print_square').print_square
+>>> print_square(4)
+####
+####
+####
+####
+
+::
+
+>>> print_square = __import__('4-print_square').print_square
+>>> print_square(2)
+##
+##
+
+::
+
+>>> print_square = __import__('4-print_square').print_square
+>>> print_square(0)
+
+Non-integers
+============
+If size is a string or None a TypeError is raised
+
+::
+
+>>> print_square = __import__('4-print_square').print_square
+>>> print_square("4")
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+::
+
+>>> print_square = __import__('4-print_square').print_square
+>>> print_square(None)
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+::
+
+>>> print_square = __import__('4-print_square').print_square
+>>> print_square("")
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+Negative numbers
+================
+If size is less than 0, ValueError is raised
+
+::
+
+>>> print_square = __import__('4-print_square').print_square
+>>> print_square(-2)
+Traceback (most recent call last):
+ValueError: size must be >=0
+
+Floats
+=======
+
+::
+
+>>> print_square = __import__('4-print_square').print_square
+>>> print_square(4.4)
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+Argument error
+==============
+
+::
+
+>>> print_square = __import__('4-print_square').print_square
+>>> print_square()
+Traceback (most recent call last):
+TypeError: print_square() missing 1 required positional argument: 'size'
+
+::
+
+>>> print_square = __import__('4-print_square').print_square
+>>> print_square(2,2)
+Traceback (most recent call last):
+ TypeError: print_square() takes 1 positional argument but 2 were given
